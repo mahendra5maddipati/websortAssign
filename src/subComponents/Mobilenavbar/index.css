@@ -1,0 +1,48 @@
+.fixed-navbar {
+  position: fixed;
+  left: 50%;
+  bottom: 24px; /* space from bottom */
+  transform: translateX(-50%);
+  background: #fff;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+  z-index: 100;
+  padding: 10px 32px;
+  border-radius: 50px; /* pill shape */
+  min-width: 320px;
+  max-width: 90vw;
+  width: auto;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar-list {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-bottom: 2px;
+}
+
+.icon-label {
+  font-size: 0.95rem;
+  color: #222;
+  font-weight: 500;
+}

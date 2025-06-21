@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.coverflow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 750px;           /* Increased width for better spacing */
+  height: 420px;          /* Increased height for better spacing */
+  perspective: 1200px;
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+  padding: 24px 0;        /* Added vertical padding */
+  box-sizing: border-box;
+  background: #fff;       /* Subtle background for contrast */
+  border-radius: 18px;    /* Rounded corners */
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12); /* Soft shadow */
+}
+
+.coverflow:active {
+  cursor: grabbing;
+}
+
+.slideWrapper {
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 12px;         /* Horizontal margin between slides */
+  box-sizing: border-box;
+}
+
+.slide {
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(.4,2,.6,1), opacity 0.5s;
+  /* opacity: 0.5; */
+  border-radius: 14px;    /* Rounded corners for images */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10); /* Soft shadow */
+  margin: 0;
+}
+
+.activeSlide {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+
+.prevSlide {
+  transform: translateX(-220px) scale(0.8); /* Slightly more space */
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.nextSlide {
+  transform: translateX(220px) scale(0.8);  /* Slightly more space */
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.caption {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  pointer-events: none;
+  white-space: nowrap;
+  margin: 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  letter-spacing: 0.5px;
+}
