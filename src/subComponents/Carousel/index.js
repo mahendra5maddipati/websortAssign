@@ -4,11 +4,13 @@ import './index.css';
 import web from '../../assets/web development.jpg';
 import app from '../../assets/App development.jpg';
 import design from '../../assets/UI design.jpg';
+import digital from '../../assets/Digital Marketing.jpg';
 
 
 const images = [{img: app, caption: 'App Development'},
     {img: design, caption: 'UI/UX Design'}, 
-    {img: web, caption: 'Web Development'}];
+    {img: web, caption: 'Web Development'},
+    {img: digital, caption: 'Digital Marketing'}];
 
 function App() {
   const [index, setIndex] = useState(0);
