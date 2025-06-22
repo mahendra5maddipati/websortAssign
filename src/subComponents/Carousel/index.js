@@ -4,13 +4,13 @@ import './index.css';
 import web from '../../assets/web development.jpg';
 import app from '../../assets/App development.jpg';
 import design from '../../assets/UI design.jpg';
-import digital from '../../assets/Digital Marketing.jpg';
+// import digital from '../../assets/Digital Marketing.jpg';
 
 
 const images = [{img: app, caption: 'App Development'},
     {img: design, caption: 'UI/UX Design'}, 
-    {img: web, caption: 'Web Development'},
-    {img: digital, caption: 'Digital Marketing'}];
+    {img: web, caption: 'Web Development'}];
+    // {img: digital, caption: 'Digital Marketing'}];
 
 function App() {
   const [index, setIndex] = useState(0);
@@ -89,7 +89,6 @@ function App() {
                 />
                 <h1 className="caption">{src.caption}</h1>
             </div>
-
         );
       })}
     </div>

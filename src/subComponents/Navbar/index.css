@@ -1,5 +1,6 @@
 .navbar-container {
     position: relative;
+    background: #DAE5FF;
 }
 
 .navbar-header {
@@ -15,7 +16,7 @@
 
 .popup-menu {
     position: absolute;
-    top: 50px; /* Adjust based on your navbar height */
+    top: 50px; 
     right: 0;
     background: white;
     border: 1px solid #ddd;

@@ -1,11 +1,9 @@
-
-
 .coverflow {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 750px;           
-  height: 420px;          
+  width: 697px;           
+  height: 388px;          
   perspective: 1200px;
   position: relative;
   overflow: hidden;
@@ -14,7 +12,7 @@
   cursor: grab;
   padding: 24px 0;        
   box-sizing: border-box;
-  background: #fff;       
+  background: transparent;      
   border-radius: 18px;    
   box-shadow: 0 8px 32px rgba(0,0,0,0.12)
 }
@@ -36,8 +34,8 @@
 
 .slide {
   position: absolute;
-  width: 400px;
-  height: 250px;
+  width: 200px;
+  height: 300px;
   object-fit: cover;
   transition: transform 0.5s cubic-bezier(.4,2,.6,1), opacity 0.5s;
   border-radius: 14px;   
@@ -64,11 +62,11 @@
 }
 
 .caption {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
+  position: relative;
+  top: 65px;
+  left: 25%;
   transform: translateX(-50%);
-  background: rgba(0,0,0,0.7);
+  background: transparent;
   color: #fff;
   padding: 12px 28px;
   border-radius: 12px;
@@ -78,4 +76,71 @@
   margin: 0;
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .coverflow {
+    width: 95vw;
+    height: 55vw;
+    min-width: 0;
+    min-height: 0;
+    padding: 16px 0;
+  }
+  .slideWrapper {
+    width: 60vw;
+    height: 35vw;
+    margin: 0 6px;
+  }
+  .slide {
+    width: 32vw;
+    height: 48vw;
+    min-width: 120px;
+    min-height: 180px;
+    max-width: 200px;
+    max-height: 300px;
+  }
+  .prevSlide {
+    transform: translateX(-120px) scale(0.8);
+  }
+  .nextSlide {
+    transform: translateX(120px) scale(0.8);
+  }
+  .caption {
+    top: 40vw;
+    left: 50%;
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .coverflow {
+    width: 100vw;
+    height: 60vw;
+    padding: 8px 0;
+    border-radius: 10px;
+  }
+  .slideWrapper {
+    width: 80vw;
+    height: 50vw;
+  }
+  .slide {
+    width: 60vw;
+    height: 90vw;
+    min-width: 90px;
+    min-height: 135px;
+    max-width: 140px;
+    max-height: 210px;
+  }
+  .prevSlide {
+    transform: translateX(-70px) scale(0.7);
+  }
+  .nextSlide {
+    transform: translateX(70px) scale(0.7);
+  }
+  .caption {
+    top: 60vw;
+    font-size: 0.95rem;
+    padding: 6px 10px;
+  }
 }

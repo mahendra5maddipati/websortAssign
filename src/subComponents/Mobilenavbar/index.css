@@ -3,7 +3,7 @@
   left: 50%;
   bottom: 24px; /* space from bottom */
   transform: translateX(-50%);
-  background: #fff;
+  background: transparent;
   box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
   z-index: 100;
   padding: 10px 32px;
@@ -45,4 +45,37 @@
   font-size: 0.95rem;
   color: #222;
   font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .fixed-navbar {
+    min-width: 0;
+    max-width: 98vw;
+    width: 98vw;
+    padding: 8px 4vw;
+    border-radius: 24px;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+  }
+  .navbar-list {
+    gap: 2vw;
+  }
+  .logo {
+    width: 22px;
+    height: 22px;
+  }
+  .icon-label {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .fixed-navbar {
+    padding: 6px 2vw;
+    border-radius: 16px;
+  }
+  .icon-label {
+    font-size: 0.78rem;
+  }
 }

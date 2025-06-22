@@ -1,0 +1,19 @@
+.career-background1{
+    background-image: url(../../assets/Careersbackground1.png);
+    color: #fff
+}
+
+.form-field{
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #E83E40;
+}
+
+.submit-field{
+    background: #E83E40;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}

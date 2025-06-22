@@ -10,7 +10,7 @@ import Navbar from '../../subComponents/Navbar';
 
 function Home() {
     return (
-        <div>
+        <div className="home-container">
             <Navbar />
             <h1>Projects</h1>
             <Carousel />
